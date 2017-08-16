@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>slides test</title>
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section data-transition = "zoom"> <!-- 1/1 -->
+					<h1>目錄</h1>
+					<p>文字</p>
+					<p>連結</p>
+					<p>Extra</p>
+					<p>Math</p>
+				</section>
+				<section> 
+					<section> <!-- 2/1 --> 
+						<h1>文字</h1>
+						<p>html</p>
+					</section>
+					<section>
+						<h1>標題</h1>
+						<p title = "title test">段落</p>
+						<p><b>粗體</b></p>
+<pre><code class ="html">&lt;h1&gt;標題&lt;/h1&gt;
+&lt;p title = "xxx"&gt;段落&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;粗體&lt;/b&gt;&lt;/p&gt;
+</code></pre>
+<pre><code>h1~6 big to small, title optional</code></pre>
+					</section>
+					<section>
+						<h1>動畫</h1>
+				        <ul>
+				            <li class="fragment">一行</li>
+				            <li class="fragment">一行</li>
+				            <li class="fragment">顯示
+				            </li>
+				        </ul>
+<pre><code>&lt;ul&gt;
+	&lt;li class = "fragment"&gt;一行&lt;/li&gt;
+	&lt;li class = "fragment"&gt;一行&lt;/li&gt;
+	&lt;li class = "fragment"&gt;顯示&lt;/li&gt;
+&lt;/ul&gt;</code></pre>				        				        
+					</section>
+					<section>
+                        <div class="theorem">
+                            <div class="label">定理</div>
+                          	ＸＸＸ<hr>
+                            <b>ＯＯＯＯＯＯＯ</b><br>
+                            <ul>
+                                <li class="fragment">
+                                一樣可以插動畫</li>
+                            </ul>
+                        </div>
+<pre><code class="html">
+&lt;div class="theorem"&gt;
+    &lt;div class="label"&gt;定理&lt;/div&gt;
+    ＸＸＸ&lt;hr&gt;
+    &lt;b&gt;ＯＯＯＯＯＯＯ&lt;/b&gt;&lt;br&gt;
+    &lt;ul&gt;
+        &lt;li class="fragment"&gt;一樣可以插動畫&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                    </section>
+				</section>
+				<section>
+					<section><!-- 3/1 -->
+						<h1>連結</h1>
+						<p>html</p>
+					</section>
+					<section><!-- 3/2 -->
+						<img src="balloon.jpg" alt="W3Schools.com">
+<pre><code class="html">&lt;img src = "xxx.jpg" width = "xxx" height= "xxx"&gt;
+</code></pre>
+						<p>width, height optional</p>
+					</section>
+					<section>
+						<a href="http://www.google.com">Google</a>	
+<pre><code class = "html">&lt;a href="http://www.google.com"&gt;Google&lt;/a&gt;</code></pre>				
+					
+					</section>
+					<section data-background = "balloon.jpg">
+						<h1>背景</h1>
+<pre><code>&lt;section data-background = "xxx.jpg"&gt;</code></pre>
+					</section>
+					<section data-background = "#071220">
+						<h1>顏色背景</h1>
+<pre> <code>&lt;section data-background = "#071220"&gt;
+</code> </pre>
+					</section>
+					<section data-background="star.jpg">
+						<iframe data-autoplay width="900" height="500" src="https://www.youtube.com/embed/Kv0eckWAQkI"></iframe>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Extra</h1>
+					</section>
+					<section>
+						<h1>文字動畫</h1>
+					    <p class="fragment grow">grow</p>
+					    <p class="fragment shrink">shrink</p>
+					    <p class="fragment fade-out">fade-out</p>
+					    <p class="fragment current-visible">visible only once</p>
+					    <p class="fragment highlight-current-blue">blue only once</p>
+					    <p class="fragment highlight-red" data-fragment-index = "1">highlight-red</p>
+					    <p class="fragment highlight-green" data-fragment-index = "3">highlight-green</p>
+					    <p class="fragment highlight-blue" data-fragment-index = "2">highlight-blue</p>
+					</section>
+					<section>
+						<h1>code</h1>
+<pre><code class = "html">
+&lt;p class="fragment grow"&gt;grow&lt;/p&gt;
+"fragment shrink"
+"fragment fade-out"
+"fragment current-visible"
+"fragment highlight-current-blue"
+"fragment highlight-red" data-fragment-index = "1"
+"fragment highlight-green" data-fragment-index = "3"
+"fragment highlight-blue" data-fragment-index = "2"
+</code></pre>
+					</section>
+					<section>
+						<h1>強調</h1>
+						<mark>123</mark>
+<pre><code data-trim data-noescape>
+	<mark>#include&lt;bits/stdc++.h&gt;</mark>
+</code></pre>
+<pre><code>&lt;mark&gt;123&lt;/mark&gt;
+&lt;pre&gt;&lt;code data-trim data-noescape&gt;
+	&lt;mark&gt;#include&lt;bits/stdc++.h&gt;&lt;/mark&gt;
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+					</section>
+					<section>
+						<h1>切換動畫</h1>
+						<p>
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=slide#/transitions">Slide</a> -
+						<a href="?transition=convex#/transitions">Convex</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a>
+						</p>
+					</section>
+					<section>
+						<h1>更改方式</h1>
+						<p>
+							更改整份動畫：更改最下面Reveal.Initialize裡的transition</br>
+							更改一頁：section data-transition = "slide"
+						</p>
+					</section>
+					<section>
+						<p>
+							其他主題<br>
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+						</p>
+<pre><code class = "html">前面有一行
+&lt;link rel="stylesheet" href="css/theme/black.css" id="theme"&gt;
+</code></pre>
+					</section>
+					<section>
+						<h1>內文動畫</h1>
+						<p>
+							<span class = "fragment">可以</span>
+							<span class = "fragment">像這樣</span><br>
+							<span class = "fragment">顯示</span><br>
+						</p>
+<pre><code class = "html">&lt;p&gt;
+	&lt;span class = "fragment"&gt;可以&lt;/span&gt;
+	&lt;span class = "fragment"&gt;像這樣&lt;/span&gt;&lt;br&gt;
+	&lt;span class = "fragment"&gt;顯示&lt;/span&gt;&lt;br&gt;
+&lt;/p&gt;
+</code></pre>
+					</section>
+					<section data-background = "balloon.jpg" data-background-transition = "zoom">
+						<h1>背景動畫</h1>
+<pre><code>&lt;section data-background = "balloon.jpg" data-background-transition = "zoom"&gt;
+</code></pre>
+					</section>
+					<section>
+						<h1>列表</h1>
+						<ul>
+							<li>第一項</li>
+							<li>第二項</li>
+							<li>第三項</li>
+						</ul>
+<pre><code>&lt;h1&gt;列表&lt;/h1&gt;
+&lt;ul&gt;
+	&lt;li&gt;第一項&lt;/li&gt;
+	&lt;li&gt;第二項&lt;/li&gt;
+	&lt;li&gt;第三項&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+					</section>
+					<section>
+						<h1>列表</h1>
+						<ol>
+							<li>第一項</li>
+							<li>第二項</li>
+							<li>第三項</li>
+						</ol>
+<pre><code>&lt;h1&gt;列表&lt;/h1&gt;
+&lt;ol&gt;
+	&lt;li&gt;第一項&lt;/li&gt;
+	&lt;li&gt;第二項&lt;/li&gt;
+	&lt;li&gt;第三項&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+					</section>
+					<section>
+						<h2>表格</h2>
+						<table>
+							<thead>
+								<tr>
+									<th>隊伍</th>
+									<th>隊員一</th>
+									<th>隊員二</th>
+									<th>隊員三</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>fruit</td>
+									<td>apple</td>
+									<td>banana</td>
+									<td>watermelon</td>
+								</tr>
+								<tr>
+									<td>station</td>
+									<td>Taipei</td>
+									<td>Hsinchu</td>
+									<td>Kaohsiung</td>
+								</tr>
+								<tr>
+									<td>DJY:GOGO</td>
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h2>code</h2>
+<pre><code>&lt;table&gt;
+&lt;thead&gt;
+	&lt;tr&gt;
+		&lt;th&gt;隊伍&lt;/th&gt;
+		&lt;th&gt;隊員一&lt;/th&gt;
+		&lt;th&gt;隊員二&lt;/th&gt;
+		&lt;th&gt;隊員三&lt;/th&gt;
+	&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+	&lt;tr&gt;
+		&lt;td&gt;fruit&lt;/td&gt;
+		&lt;td&gt;apple&lt;/td&gt;
+		&lt;td&gt;banana&lt;/td&gt;
+		&lt;td&gt;watermelon&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;station&lt;/td&gt;
+		&lt;td&gt;Taipei&lt;/td&gt;
+		&lt;td&gt;Hsinchu&lt;/td&gt;
+		&lt;td&gt;Kaohsiung&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;DJY:GOGO&lt;/td&gt;
+		&lt;td&gt;a&lt;/td&gt;
+		&lt;td&gt;b&lt;/td&gt;
+		&lt;td&gt;c&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>文字</h1>
+						<p>Markdown</p>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						你可以像這樣編輯
+						
+						直接換行
+						
+						apple
+						
+						*apple*
+						
+						**apple**
+
+<pre><code>
+你可以像這樣編輯
+
+直接換行 // 中間空一行
+
+apple
+
+*apple* // 斜體
+ 
+**apple** // 粗體
+</code></pre>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/javascript">
+						大標題
+						=====
+						小標題
+						-----
+<pre>
+<code>大標題
+=====
+小標題
+-----
+</code></pre>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/javascript">
+							# This is H1
+							## This is H2
+							###### This is H6
+<pre>
+<code class = "html"># This is H1
+## This is H2
+###### This is H6
+</code>
+</pre>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/javascript">
+							> 可以有層次
+							>
+							> > 顯示 
+							>
+							> > > 像這樣
+							>
+							> > 第二層
+							>	###也可以套井字號					
+						</script>
+					</section>
+					<section>
+<pre>
+<code>&gt; 可以有層次
+&gt;
+&gt; &gt; 顯示
+&gt;
+&gt; &gt; &gt; 像這樣
+&gt;
+&gt; &gt; 第二層
+&gt;
+</code>
+</pre>	
+					</section>
+					<section data-markdown>
+						* ##章節1
+							- 小章節
+						* 章節二
+							- 小章節
+					</section>
+					<section>
+<pre><code>* ##章節1
+	- 小章節
+* 章節二
+	- 小章節
+</code></pre>						
+					</section>
+					<section data-markdown>
+						##副標題可以編號
+						* 標題
+						 1. 副標
+						 2. 副標				 
+					</section>
+					<section>
+<pre><code>##副標題可以編號
+* 標題
+ 1. 副標
+ 2. 副標
+</code></pre>
+					</section>
+				</section>
+				<section> 
+					<section>
+						<h1>連結</h1>
+						<p>Markdown</p>
+					</section>
+					<section data-markdown>
+						<script type="text/javascript">
+						這是一個[Goolge](http://www.google.com.tw)的連結
+<pre><code>這是一個[Goolge](http://www.google.com.tw)的連結
+</code></pre>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/javascript">
+							##這是從圖片連結到Google
+							[![](balloon.jpg "放在圖片顯示的字")](http://www.google.com.tw)
+<pre><code>##這是從圖片連結到Google
+[![](balloon.jpg "放在圖片顯示的字")](http://www.google.com.tw)
+</code></pre>
+						</script>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>補充</h1>
+					</section>
+					<section>
+<pre><code>頁碼 
+Reveal.initialize({
+	...
+	slideNumber : true, // or
+	slideNumber : c/t,
+})
+</code></pre>					
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>
+							Math
+						</h1>
+					</section>
+					<section>
+						<a href = "http://iori.sinaapp.com/17.html">Symbol</a>
+						<br/>
+						<a href = "http://apps.eui.eu/Personal/Researchers/KPytka/classes/presentation/test/examples/math.html#/1">Example</a>
+					</section>
+					<section>
+						\[\begin{aligned}
+						\dot{x} &amp; = \sigma(y-x) \\
+						\dot{y} &amp; = \rho x - y - xz \\
+						\dot{z} &amp; = -\beta z + xy
+						\end{aligned} \]
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+		//	Reveal.configure({ slideNumber : true}),
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+			//	slideNumber : 'c/t',
+			//	slideNumber : true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math-katex/math-katex.js', async: true },
+					{ src: 'plugin/math/math.js', async: true, callback: function() {
+				      setTimeout( function() {
+				        MathJax.Hub.Config({
+				          SVG: {
+				            scale: 90
+				            },
+				          "HTML-CSS": {
+				            scale: 90,
+				            }
+				          });
+				        }, 2000);
+				      },
+				      config: 'TeX-AMS_HTML-full'
+				    },
+				    { src: 'js/dazzleSketch.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
